@@ -5,6 +5,19 @@ Twitter Content Filter is a tool for flagging and filtering out bad content from
 To use this tool, you will need to set up a developer account on Twitter, create an app, and obtain the necessary API keys and tokens. You will also need to have Python and the tweepy and pandas libraries installed on your computer.
 
 ## Usage
+1. First, we will need to import the necessary libraries for reading and manipulating the CSV file and for accessing and parsing tweets. These libraries include pandas, tweepy, and re.
+
+2. Next, we will need to set up our API credentials for accessing tweets using tweepy. This includes creating a developer account on Twitter, creating an app, and obtaining the necessary API keys and tokens.
+
+3. We will then use pandas to read in our CSV file and create a dataframe from it. We will then use the pandas `str.contains()` method to search for any hashtags in the tweets that match words in the CSV file.
+
+4. If we find a match, we will not add it to the CSV file. If we do not find a match, we will use the pandas `append()` method to add the new hashtag to the CSV file.
+
+5. We will then use the tweepy library to search for tweets containing the hashtag and use the re library to extract the hashtags from the tweets.
+
+6. Finally, we will save the updated CSV file using the pandas `to_csv()` method.
+
+## Use case 
 1. Create a CSV file called hashtags.csv with the list of keywords that you want to filter out.
 2. Run the script by typing `python twitter_content_filter.py` in your command line.
 3. The script will search for tweets containing the hashtag you specified in the script and extract the hashtags from those tweets.
